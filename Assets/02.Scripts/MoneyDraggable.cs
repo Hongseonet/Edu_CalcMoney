@@ -1,8 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Money : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class MoneyDraggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    [SerializeField]
+    Image image;
+
+
+    public void OnInit()
+    {
+
+    }
 
     void OnEnable()
     {
@@ -29,13 +38,5 @@ public class Money : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         throw new System.NotImplementedException();
     }
 
-    public void OnInit()
-    {
-
-    }
-
-    private void OnDestroy()
-    {
-        
-    }
+    
 }

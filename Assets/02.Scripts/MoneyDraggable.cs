@@ -8,9 +8,20 @@ public class MoneyDraggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     Image image;
 
 
-    public void OnInit()
+    public void OnInit(int amount)
     {
+        switch (amount)
+        {
+            case 1000:
 
+                break;
+            case 5000:
+
+                break;
+            case 10000:
+
+                break;
+        }
     }
 
     void OnEnable()
@@ -25,17 +36,22 @@ public class MoneyDraggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        transform.GetComponent<RectTransform>().anchoredPosition = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        
+    }
+
+    void ButtonEvent() //flip
+    {
+
     }
 
     
